@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Metric Converter</string>
+    <string name="metric_converter">Metric Converter</string>
+    <string name="by_hebron_prasetya">By: Hebron Prasetya</string>
+    <string name="input_nilai">Input Nilai</string>
+    <string name="dari">Dari:</string>
+    <string name="ke">Ke:</string>
+    <string name="hasil_0">Hasil: 0</string>
+
+    <!-- Metrics Array -->
+    <string-array name="metrics">
+        <item>Pilih Metrik</item>
+        <item>Panjang</item>
+        <item>Massa</item>
+        <item>Waktu</item>
+        <item>Arus Listrik</item>
+        <item>Suhu</item>
+    </string-array>
+
+    <!-- Placeholder Satuan -->
+    <string-array name="template">
+        <item>--Pilih Satuan--</item>
+    </string-array>
+</resources>

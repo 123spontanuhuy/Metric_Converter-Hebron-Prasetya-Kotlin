@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/metric_converter"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="5dp"
+        android:background="@color/material_on_surface_stroke" />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/by_hebron_prasetya"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/headerTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/getInputValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/input_nilai"
+        android:inputType="number"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:background="@android:color/transparent"
+        android:padding="16dp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <Spinner
+        android:id="@+id/spMetrics"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/metrics"
+        android:background="@android:color/transparent"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/getInputValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dari"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/spMetrics"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="41dp"
+        android:padding="8dp" />
+
+    <Spinner
+        android:id="@+id/spOriginal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/fromLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ke"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/spOriginal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="41dp"
+        android:padding="8dp" />
+
+    <Spinner
+        android:id="@+id/spConvert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/toLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintVertical_bias="0.05"/>
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hasil_0"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        app:layout_constraintTop_toBottomOf="@+id/spConvert"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="41dp"
+        android:padding="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
